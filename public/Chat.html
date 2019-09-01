@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+   <!-- Page Head \_(-_-)_/ -->
+
+    <meta charset="utf-8">
+    <title>Spey || Room</title>
+
+   <!-- Page Information ( ͡° ͜ʖ ͡°)  -->
+
+   <meta name="author" content="Manan" />
+   <meta name="description" content="" />
+   <meta name="keywords" content="" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+   <!-- Stylesheets (~.~) -->
+
+    <link rel="stylesheet" href="Styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="Styles/skeleton.css" type="text/css"> 
+    <link rel="stylesheet" href="Styles/Chat.css" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand:400,700&display=swap" rel="stylesheet">
+
+  </head>
+<body>
+
+ <div class="Modal">
+<h2>Enter Your Username</h2>
+<input required size="25" type="text" class="Handle" placeholder="Username">
+<input class="ModalGo" type="button" value="Go!">
+</div>   
+
+
+<section class="Chat-Replies">
+<div class="Container ChatOutput">
+ <!-- <p class="Msg-Sender"><span class="Details">Manan</span>Hey!</p>
+  <p class="Msg-Reciever">Yo!</p> --> 
+</div>
+</section>
+
+<footer>
+<input type="text" class="Message" placeholder="Enter Message to Send">
+<img src="Elements/Icons/send.svg" alt="" class="Send-Btn">
+</footer>
+
+
+<!-- JavaScript Front-end Installation ಠ╭╮ಠ  -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+<script src="Actions/qs.min.js" charset="utf-8"></script>
+<script src="Actions/ActionsChat.js" charset="utf-8"></script>
+</body>
+</html>
