@@ -103,6 +103,10 @@ header {
   align-items: center;
   flex-direction: column;
 
+  h3 {
+   margin-top: 0.8em;
+  }
+
   p {
    font-weight: 600;
   }
@@ -334,10 +338,43 @@ nav {
  margin: 0 auto;
  width: 80%;
 
- h3{
+ h3 {
   margin-top: 2.3em;
   font-size: 2em;
   margin-bottom: 0.5em;
+  text-align: center;
+ }
+}
+.Right {
+ display: none;
+}
+}
+}
+
+@media (max-width: 320px) {
+
+header {
+ h2 {
+  font-size: 1.7em;
+  margin-top: 0.5em;
+ }
+
+ nav a {
+  font-size: 0.8em;
+  margin-left: 0.25em;
+ }
+}
+
+.Hero {
+.Left {
+ margin: 0 auto;
+ width: 80%;
+
+ h3{
+  margin-top: 1.4em;
+  font-size: 2em;
+  margin-bottom: 0.7em;
+  text-align: center;
  }
 }
 .Right {

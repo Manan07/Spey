@@ -12,12 +12,20 @@ const SendBtn = document.querySelector('.Send-Btn')
 const ChatOutput = document.querySelector('.ChatOutput')
 const Details = document.querySelector('.Details')
 
+
 const Da = new Date();
 const newTime = Da.toLocaleTimeString();
 
 let Value;
 const Modal = document.querySelector('.Modal')
 const ModalGo = document.querySelector('.ModalGo')
+
+// Function
+
+const scrollToMsg = () => {
+ const MsgElem = document.querySelectorAll('.Msg')
+ MsgElem[MsgElem.length - 1].scrollIntoView({ behavior: 'smooth', block: 'end' });
+}
 
 ModalGo.onclick = function() {
  if(MsgHandle.value === '') {
@@ -81,9 +89,11 @@ MsgInput.value = ""
 
 Socket.on('chatMsgs', function(data) {
  if(data.Handle === MsgHandle.value) {
- ChatOutput.innerHTML += '<p class="Msg-Sender"><span class="Details">' + data.Handle + ' (You) - ' + newTime + '</span>' + data.Content + '</p>'
+ ChatOutput.innerHTML += '<p class="Msg Msg-Sender"><span class="Details">' + data.Handle + ' (You) - ' + newTime + '</span>' + data.Content + '</p>'
+ scrollToMsg()
  }
  else {
- ChatOutput.innerHTML += '<p class="Msg-Reciever"><span class="Details">' + data.Handle + ' - ' + newTime + '</span>' + data.Content + '</p>'
+ ChatOutput.innerHTML += '<p class="Msg Msg-Reciever"><span class="Details">' + data.Handle + ' - ' + newTime + '</span>' + data.Content + '</p>'
+ scrollToMsg()
 }
 })
