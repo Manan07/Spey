@@ -76,23 +76,24 @@ color: #566270;
 
 .Modal {
  position: absolute;
- top: 12%;
+ top: 0;
  left: 0;
  right: 0;
  bottom: 0;
  margin: 0 auto;
- width: 60%;
- height: 60%;
+ width: 100%;
+ height: 100%;
  display: flex;
  flex-direction: column;
+ justify-content: center;
  align-items: center;
  background-color: #FFF;
+ z-index: 9999;
 
  h2 {
   font-weight: bolder;
   letter-spacing: 0.1em;
-  margin-top: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 0.4em;
  } 
 
  input[type=text] {
@@ -158,8 +159,9 @@ color: #566270;
   }
 
   .Msg-Sender {
-   display: block;
+   display: inline-block;
    color: #FFF;
+   text-align: left;
    padding: 1em 2em;
    border-top-right-radius: 1000px;
    border-bottom-right-radius: 1000px;
@@ -181,8 +183,9 @@ color: #566270;
   }
   
   .Msg-Reciever {
-   display: block;
+   display: inline-block;
    color: #FFF;
+   text-align: right;
    background-color: #A593E0;
    padding: 1em 2em;
    border-top-left-radius: 1000px;
@@ -199,7 +202,7 @@ color: #566270;
 
 footer {
  max-width: 100%;
- height: 14vh;
+ height: 12vh;
  position: fixed;
  bottom: 0;
  left: 0;
@@ -233,7 +236,7 @@ footer {
      Responsive
 *******************/
 
-@media (min-width: 120px){
+@media (max-width: 120px){
 .Modal {
   height: 100%;
   width: 100%;
@@ -267,7 +270,7 @@ footer {
 }
 
 
-@media (min-width: 360px) {
+@media (max-width: 360px) {
  .Modal {
   height: 100%;
   width: 100%;
@@ -292,7 +295,7 @@ footer {
 }
 }
 
-@media (min-width: 527px) {
+@media (max-width: 527px) {
  .Modal {
   height: 100%;
   width: 100%;
@@ -315,7 +318,7 @@ footer {
 }
 }
 
-@media (min-width: 505px) {
+@media (max-width: 505px) {
  .Modal {
   height: 100%;
   width: 100%;
@@ -338,7 +341,7 @@ footer {
 }
 }
 
-@media (min-width: 625px) {
+@media (max-width: 625px) {
  .Modal {
   height: 100%;
   width: 100%;
@@ -361,7 +364,7 @@ footer {
 }
 }
 
-@media (min-width: 703px) {
+@media (max-width: 703px) {
  .Modal {
   height: 100%;
   width: 100%;
@@ -384,7 +387,7 @@ footer {
 }
 }
 
-@media (min-width: 835px) {
+@media (max-width: 835px) {
  .Modal {
   height: 100%;
   width: 100%;
@@ -407,7 +410,7 @@ footer {
 }
 }
 
-@media (min-width: 903px) {
+@media (max-width: 903px) {
  .Modal {
   height: 100%;
   width: 100%;
@@ -428,10 +431,4 @@ footer {
 footer {
  height: 10vh;
 }
-}
-
-@media (min-width: 1024px) {
-footer {
- height: 13vh;
-}    
 }
