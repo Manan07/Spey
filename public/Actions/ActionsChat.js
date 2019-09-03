@@ -27,6 +27,17 @@ const scrollToMsg = () => {
  MsgElem[MsgElem.length - 1].scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 
+const CSSBuff = () => {
+ const MsgElem = document.querySelectorAll('.Msg')
+ console.log(MsgElem[MsgElem.length - 1].innerText.length)
+
+if(MsgElem[MsgElem.length - 1].innerText.length >= 590) {
+ MsgElem[MsgElem.length - 1].style.borderRadius = 0
+}
+}
+
+// Actual Lifting
+
 ModalGo.onclick = function() {
  if(MsgHandle.value === '') {
   alert('Input Field is empty, Username is Required!')
@@ -89,11 +100,14 @@ MsgInput.value = ""
 
 Socket.on('chatMsgs', function(data) {
  if(data.Handle === MsgHandle.value) {
- ChatOutput.innerHTML += '<p class="Msg Msg-Sender"><span class="Details">' + data.Handle + ' (You) - ' + newTime + '</span>' + data.Content + '</p>'
+ ChatOutput.innerHTML += '<div class="Sender"><span class="Detail-Sender">' + data.Handle + ' (You) - ' + newTime + '</span>' + '<p class="Msg Msg-Sender">' + data.Content + '</p>' + '</div>'
  scrollToMsg()
+ CSSBuff()
  }
  else {
- ChatOutput.innerHTML += '<p class="Msg Msg-Reciever"><span class="Details">' + data.Handle + ' - ' + newTime + '</span>' + data.Content + '</p>'
+ // ChatOutput.innerHTML += '<p class="Msg Msg-Reciever"><span class="Details">' + data.Handle + ' - ' + newTime + '</span>' + data.Content + '</p>'
+ ChatOutput.innerHTML += '<div class="Reciever"><span class="Detail-Reciever">' + data.Handle + ' - ' + newTime + '</span>' + '<p class="Msg Msg-Reciever">' + data.Content + '</p>' + '</div>'
  scrollToMsg()
+ CSSBuff()
 }
 })
