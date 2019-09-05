@@ -31,7 +31,7 @@ const CSSBuff = () => {
  const MsgElem = document.querySelectorAll('.Msg')
  console.log(MsgElem[MsgElem.length - 1].innerText.length)
 
-if(MsgElem[MsgElem.length - 1].innerText.length >= 590) {
+if(MsgElem[MsgElem.length - 1].innerText.length >= 350) {
  MsgElem[MsgElem.length - 1].style.borderRadius = 0
 }
 }
