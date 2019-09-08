@@ -156,7 +156,7 @@ color: #566270;
    position: relative;
   }
 
-  p:first-child {
+  div:first-child {
    margin-top: 2em;
   }
 
@@ -198,7 +198,7 @@ color: #566270;
   }
   
   .Msg-Reciever {
-   display: block;
+   display: inline-block;
    color: #FFF;
    text-align: right;
    background-color: #A593E0;
@@ -268,7 +268,7 @@ color: #566270;
 }
 
 .Input {
- height: 10vh;
+ height: 5vh;
 
  .Send-Btn {
   height: 50%;
@@ -301,10 +301,6 @@ color: #566270;
    font-size: 2em;
   }
  }
-
-.Input {
- height: 10vh;
-}
 }
 
 @media (max-width: 527px) {
